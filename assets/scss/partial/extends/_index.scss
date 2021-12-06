@@ -1,0 +1,23 @@
+%underline-effect{
+    a {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            border: 1px solid $primary-color;
+            width: 0px;
+            transition: 0.3s all;
+            left: 0;
+            bottom: -1px;
+            visibility: hidden;
+        }
+    }
+    &:hover {
+        a {
+            &::after {
+                width: 100%;
+                visibility: visible;
+            }
+        }
+    }
+}
