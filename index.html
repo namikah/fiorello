@@ -13,12 +13,12 @@
 
 <body>
     <header>
-        <div class="container navbar-flex d-flex justify-content-between flex-nowrap m-sm-auto align-items-center">
-            <div class=" left-side col-md-3 align-items-center m-sm-auto">
+        <div class="container navbar-flex">
+            <div class=" left-side">
                 <img src="./assets/img/logo.png" alt="fiorello-logo">
             </div>
-            <div class="right-side col-md-9 align-items-center">
-                <ul>
+            <div class="right-side">
+                <ul class="navbar-menu">
                     <li class="home-menu">
                         <a href="">Home</a>
                         <div class="sub-menu">
@@ -43,17 +43,28 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#">SHOP</a></li>
+                    <li class="shop-menu">
+                        <a href="#">SHOP</a>
+                        <div class="sub-menu shopping-sub-menu">
+                            <ul class="shop-ulist-flex">
+                                <li>
+                                    <a href="#">Product Types</a>
+                                </li>
+                                <li><a href="#">Shop Pages</a></li>
+                                <li><a href="#">Shop Types</a></li>
+                                <li><a href="#">Shop layouts</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#">PORTFOLIO</a></li>
                     <li><a href="#">BLOG</a></li>
                     <li><a href="#">ELEMENTS</a></li>
                     <li>
                         <i class="fas fa-search"></i>
-                        <i class="fas fa-shopping-cart"><span>CART (0$)</span></i>
+                        <i class="fas fa-shopping-cart shopping-cart-sum"><span>CART (0$)</span></i>
                     </li>
                 </ul>
             </div>
-
         </div>
 
     </header>

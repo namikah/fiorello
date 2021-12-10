@@ -1,0 +1,11 @@
+@mixin d-flex-3 ($justify-content: space-between, $align-items: center) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin a-style-3($font-size:$primary-font-size, $text-decoration: none, $text-transform: capitalize) {
+	font-size: $font-size;
+	text-decoration: $text-decoration;
+	text-transform: $text-transform;
+}
