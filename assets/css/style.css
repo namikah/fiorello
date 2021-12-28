@@ -1,11 +1,11 @@
-header .navbar-flex .right-side > ul li a, header .navbar-flex .right-side > ul li:hover .sub-menu ul li a, header .navbar-flex .right-side > ul li:hover .sub-menu.shopping-sub-menu ul li a {
+header .navbar-flex .right-side > ul > li > a, header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex > li div ul li > a, header .navbar-flex .right-side > ul > li:hover .sub-menu ul li > a, header .navbar-flex .right-side > ul > li:hover .sub-menu.shopping-sub-menu ul li > a {
   position: relative;
 }
 
-header .navbar-flex .right-side > ul li a::after, header .navbar-flex .right-side > ul li:hover .sub-menu ul li a::after, header .navbar-flex .right-side > ul li:hover .sub-menu.shopping-sub-menu ul li a::after {
+header .navbar-flex .right-side > ul > li > a::after, header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex > li div ul li > a::after, header .navbar-flex .right-side > ul > li:hover .sub-menu ul li > a::after, header .navbar-flex .right-side > ul > li:hover .sub-menu.shopping-sub-menu ul li > a::after {
   content: "";
   position: absolute;
-  border: 1px solid #1b1b1b;
+  border-bottom: 1px solid #1b1b1b;
   width: 0px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
@@ -14,7 +14,7 @@ header .navbar-flex .right-side > ul li a::after, header .navbar-flex .right-sid
   visibility: hidden;
 }
 
-header .navbar-flex .right-side > ul li:hover a::after, header .navbar-flex .right-side > ul li:hover .sub-menu ul li:hover a::after {
+header .navbar-flex .right-side > ul > li:hover > a::after, header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex > li div ul li:hover > a::after, header .navbar-flex .right-side > ul > li:hover .sub-menu ul li:hover > a::after {
   width: 100%;
   visibility: visible;
 }
@@ -102,44 +102,44 @@ header .navbar-flex .left-side img {
   cursor: pointer;
 }
 
-header .navbar-flex .right-side > ul li {
+header .navbar-flex .right-side > ul > li {
   position: relative;
   display: inline-block;
   padding-left: 30px;
   height: 100%;
 }
 
-header .navbar-flex .right-side > ul li a {
+header .navbar-flex .right-side > ul > li a {
   color: #1b1b1b;
   font-size: 15px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-header .navbar-flex .right-side > ul li i {
+header .navbar-flex .right-side > ul > li i {
   cursor: pointer;
   padding: 0 10px;
   font-size: 15px;
   color: #1b1b1b;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-header .navbar-flex .right-side > ul li i span {
+header .navbar-flex .right-side > ul > li i span {
   padding: 0 10px;
   font-weight: 100;
 }
 
-header .navbar-flex .right-side > ul li i:hover:first-child {
+header .navbar-flex .right-side > ul > li i:hover:first-child {
   color: red;
 }
 
-header .navbar-flex .right-side > ul li i.shopping-cart-sum {
+header .navbar-flex .right-side > ul > li i.shopping-cart-sum {
   position: relative;
 }
 
-header .navbar-flex .right-side > ul li i.shopping-cart-sum::after {
-  content: "0";
+header .navbar-flex .right-side > ul > li i.shopping-cart-sum::after {
+  content: '0';
   color: white;
   font-size: 10px;
   font-weight: 600;
@@ -155,8 +155,8 @@ header .navbar-flex .right-side > ul li i.shopping-cart-sum::after {
   background-color: red;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu {
-  padding-top: 50px;
+header .navbar-flex .right-side > ul > li .sub-menu {
+  padding-top: 45px;
   padding-bottom: 20px;
   visibility: hidden;
   opacity: 0;
@@ -171,43 +171,78 @@ header .navbar-flex .right-side > ul li .sub-menu {
           transform-origin: top;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu ul {
+header .navbar-flex .right-side > ul > li .sub-menu ul {
   width: 100%;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu ul li {
+header .navbar-flex .right-side > ul > li .sub-menu ul li {
   display: block;
   padding: 10px 30px;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu ul li a {
+header .navbar-flex .right-side > ul > li .sub-menu ul li a {
   color: #1b1b1b;
   font-size: 15px;
   text-decoration: none;
   text-transform: capitalize;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu.shopping-sub-menu {
+header .navbar-flex .right-side > ul > li .sub-menu ul .layouts-side-menu {
+  position: relative;
+}
+
+header .navbar-flex .right-side > ul > li .sub-menu ul .layouts-side-menu::after {
+  content: ' > ';
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  color: black;
+  font-size: 12px;
+}
+
+header .navbar-flex .right-side > ul > li .sub-menu ul .layouts-side-menu .sub-menu-right {
+  width: 200px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  padding-bottom: 20px;
+  left: 100%;
+  top: 0;
+  background-color: white;
+  position: absolute;
+  visibility: hidden;
+}
+
+header .navbar-flex .right-side > ul > li .sub-menu ul .layouts-side-menu:hover .sub-menu-right {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu {
   width: 1100px;
-  -webkit-transform: translatex(-45%);
-          transform: translatex(-45%);
+  -webkit-transform: translateX(-45%);
+          transform: translateX(-45%);
   -webkit-transform-origin: top;
           transform-origin: top;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu.shopping-sub-menu .shop-ulist-flex {
+header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-header .navbar-flex .right-side > ul li .sub-menu.shopping-sub-menu .shop-ulist-flex li a {
+header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex > li > a {
   font-size: 15px;
   text-decoration: none;
   text-transform: capitalize;
@@ -215,37 +250,45 @@ header .navbar-flex .right-side > ul li .sub-menu.shopping-sub-menu .shop-ulist-
   font-weight: 900;
 }
 
-header .navbar-flex .right-side > ul li:hover .sub-menu {
+header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex > li div {
+  padding-top: 20px;
+}
+
+header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex > li div ul li {
+  padding-left: 0;
+}
+
+header .navbar-flex .right-side > ul > li:hover .sub-menu {
   visibility: visible;
   -webkit-transition: -webkit-transform;
   transition: -webkit-transform;
   transition: transform;
   transition: transform, -webkit-transform;
-  -webkit-transition: .3s all;
-  transition: .3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   opacity: 1;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
 
-header .navbar-flex .right-side > ul li:hover .sub-menu ul li {
+header .navbar-flex .right-side > ul > li:hover .sub-menu ul li {
   opacity: 0.9;
 }
 
-header .navbar-flex .right-side > ul li:hover .sub-menu.shopping-sub-menu {
+header .navbar-flex .right-side > ul > li:hover .sub-menu.shopping-sub-menu {
   visibility: visible;
   -webkit-transition: -webkit-transform;
   transition: -webkit-transform;
   transition: transform;
   transition: transform, -webkit-transform;
-  -webkit-transition: .3s all;
-  transition: .3s all;
-  -webkit-transform: translatex(-45%);
-          transform: translatex(-45%);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform: translateX(-45%);
+          transform: translateX(-45%);
   opacity: 1;
 }
 
-header .navbar-flex .right-side > ul li:hover .sub-menu.shopping-sub-menu ul li {
+header .navbar-flex .right-side > ul > li:hover .sub-menu.shopping-sub-menu ul li {
   opacity: 0.9;
 }
 /*# sourceMappingURL=style.css.map */

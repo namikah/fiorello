@@ -1,10 +1,10 @@
 %underline-effect{
-    a {
+    > a {
         position: relative;
         &::after {
             content: "";
             position: absolute;
-            border: 1px solid $primary-color;
+            border-bottom: 1px solid $primary-color;
             width: 0px;
             transition: 0.3s all;
             left: 0;
@@ -13,7 +13,7 @@
         }
     }
     &:hover {
-        a {
+        > a {
             &::after {
                 width: 100%;
                 visibility: visible;
