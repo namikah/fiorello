@@ -224,10 +224,6 @@ header .navbar-flex .right-side > ul > li .sub-menu ul .layouts-side-menu:hover 
 
 header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu {
   width: 1100px;
-  -webkit-transform: translateX(-45%);
-          transform: translateX(-45%);
-  -webkit-transform-origin: top;
-          transform-origin: top;
 }
 
 header .navbar-flex .right-side > ul > li .sub-menu.shopping-sub-menu .shop-ulist-flex {
